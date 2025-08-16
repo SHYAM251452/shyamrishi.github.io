@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shyam Rishi — Portfolio & Certifications</title>
+  <meta name="description" content="Personal site showcasing certifications, projects, and contact details." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0e14;
+      --panel:#121826;
+      --muted:#90a3b3;
+      --text:#e6edf3;
+      --brand:#8b5cf6;
+      --brand-2:#22d3ee;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --grid: 1200px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:Inter,system-ui; background:var(--bg); color:var(--text); position:relative; overflow-x:hidden}
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block; border-radius:var(--radius)}
+    .container{max-width:var(--grid); margin:0 auto; padding:24px}
+    header{position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(0,0,0,.5); z-index:100}
+    .nav{display:flex; justify-content:space-between; align-items:center}
+    .logo{display:flex; align-items:center; gap:12px; font-weight:800}
+    .logo-badge{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid; place-items:center; color:white}
+    .hero{display:grid; grid-template-columns:1fr; gap:20px; align-items:center; padding:40px 0; position:relative; z-index:1}
+    @media(min-width:880px){.hero{grid-template-columns:1fr 1fr}}
+    .card{background:var(--panel); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+    .grid{display:grid; gap:16px}
+    @media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1040px){.grid{grid-template-columns:repeat(3,1fr)}}
+    footer{padding:20px 0; text-align:center; color:var(--muted)}
+
+    /* Creative stains / abstract shapes */
+    .stain{
+      position:absolute;
+      width:300px; height:300px;
+      border-radius:50%;
+      filter:blur(120px);
+      z-index:0;
+    }
+    .stain.purple{background:rgba(139,92,246,0.4); top:-80px; left:-100px;}
+    .stain.cyan{background:rgba(34,211,238,0.35); bottom:-120px; right:-150px;}
+    .stain.pink{background:rgba(236,72,153,0.3); top:50%; left:50%; transform:translate(-50%,-50%)}
+
+    /* Photo styling */
+    .photo-frame{
+      position:relative;
+      border-radius:50%;
+      overflow:hidden;
+      width:280px;
+      height:280px;
+      margin:auto;
+      box-shadow:0 0 40px rgba(139,92,246,0.6);
+    }
+    .photo-frame img{width:100%; height:100%; object-fit:cover}
+  </style>
+</head>
+<body>
+  <!-- stains -->
+  <div class="stain purple"></div>
+  <div class="stain cyan"></div>
+  <div class="stain pink"></div>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="logo-badge">SR</div>
+        <div>Shyam Rishi</div>
+      </div>
+      <nav class="nav">
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card">
+        <h1>Hello! I'm Shyam Rishi</h1>
+        <p>Aspiring Developer • Problem Solver • Lifelong Learner</p>
+      </div>
+      <div class="card" style="display:flex; justify-content:center; align-items:center; background:transparent; box-shadow:none;">
+        <div class="photo-frame">
+          <img src="ChatGPT Image Aug 15, 2025, 07_27_56 PM.png" alt="Shyam Rishi" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <h2>Online Course Certifications</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>MongoDB Basics for Students</h3>
+          <p>Issued by MongoDB</p>
+          <a href="https://www.credly.com/go/JByzPftr" target="_blank">View Certificate</a>
+        </article>
+
+        <article class="card">
+          <h3>C Training (Spoken Tutorial)</h3>
+          <p>Issued by IIT Bombay (Spoken Tutorial Project)</p>
+          <a href="SHYAMRISHI-RAMANATHAN-Participant-Certificate.pdf" target="_blank">View Certificate</a>
+        </article>
+
+        <article class="card">
+          <h3>Academic Process Mining Fundamentals</h3>
+          <p>Issued by Celonis</p>
+          <a href="https://www.credly.com/badges/31eef346-ee0f-454f-a301-6fd2652f784b" target="_blank">View Certificate</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p><strong>Phone:</strong> <a href="tel:+916369481436">+91 63694 81436</a></p>
+        <p><strong>Email:</strong> <a href="mailto:rishishyam25@gmail.com">rishishyam25@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Shyam Rishi. Hosted on GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
